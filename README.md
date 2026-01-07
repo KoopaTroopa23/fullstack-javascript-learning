@@ -6,6 +6,17 @@ A simple Node.js backend server built with core Node modules.
 - Basic Node.js server setup
 - Handling HTTP requests
 - Running a backend service locally
+## API Endpoints
+
+- `GET /health`  
+  Returns service health status.
+
+Example response:
+```json
+{
+  "status": "ok"
+}
+
 
 ## How to run the project
 1. Install Node.js (LTS)
