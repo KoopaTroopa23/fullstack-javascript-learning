@@ -1,12 +1,12 @@
-const http = require("http");
+const express = require("express");
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Node.js backend is running!");
-});
-
+const app = express();
 const PORT = 3000;
 
-server.listen(PORT, () => {
+app.get("/", (req, res) => {
+  res.send("Express backend is running!");
+});
+
+app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
