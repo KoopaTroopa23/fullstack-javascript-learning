@@ -1,27 +1,40 @@
 # Node Backend Basics
 
-A simple Node.js backend server built with core Node modules.
+A beginner-friendly Node.js backend project built with Express that demonstrates core backend development concepts.
 
-## What this project demonstrates
-- Basic Node.js server setup
-- Handling HTTP requests
-- Running a backend service locally
+---
+
+## What This Project Demonstrates
+
+- Node.js backend fundamentals
+- Express.js framework usage
+- REST API design
+- Handling JSON requests and responses
+- In-memory data storage (no database yet)
+- Basic CRUD operations (Create, Read)
+- Professional GitHub workflow
+
+---
+
+## Technology Stack
+
+- **Node.js (LTS)**
+- **Express.js**
+- JavaScript
+- Git & GitHub
+
+---
+
 ## API Endpoints
 
-- `GET /health`  
-  Returns service health status.
+### Health Check
 
-Example response:
+**GET `/health`**
+
+Returns the current health status of the service.
+
+**Example response:**
 ```json
 {
   "status": "ok"
 }
-
-
-## How to run the project
-1. Install Node.js (LTS)
-2. Clone this repository
-3. Run:
-
-```bash
-node index.js
