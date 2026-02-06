@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../react-frontend"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../javascript-course"
+		}
+	],
+	"settings": {}
+}
