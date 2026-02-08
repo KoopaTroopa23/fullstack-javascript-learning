@@ -117,6 +117,13 @@ app.post("/users", (req, res) => {
 
 // -------------------- Start Server --------------------
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// Only start the server when you run: node index.js
+// (If Jest imports this file, we do NOT want it to auto-start a server.)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+// Export the Express app so Jest/Supertest can use it
+module.exports = app;

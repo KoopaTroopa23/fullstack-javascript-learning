@@ -1,0 +1,280 @@
+======================================================================
+SPRING BOOT (GRADLE) vs JAVASCRIPT (NODE + REACT) — QUICK REFERENCE
+======================================================================
+
+GOAL
+- Spring Boot (Gradle) = backend server app (Java)
+- Node.js (Express)     = backend server app (JavaScript)
+- React (Vite)          = frontend UI app (JavaScript)
+
+----------------------------------------------------------------------
+1) PROJECT FILES: “What is this file like in Spring Boot?”
+----------------------------------------------------------------------
+
+A) BACKEND (Node/Express) vs Spring Boot
+
+Node/Express project (typical):
+- package.json
+  = build.gradle (dependencies + scripts)
+
+- package-lock.json
+  = Gradle dependency resolution snapshot
+  (locks exact versions for consistent installs)
+
+- node_modules/
+  = Gradle downloaded libraries cache (NOT committed)
+
+- index.js (or app.js / server.js)
+  = Application.java + Controllers combined
+  (server start + routes in one place)
+
+- .env (optional)
+  = application.properties / application.yml (environment config)
+
+- db.js
+  = datasource + repository configuration
+
+- routes/
+  = @RestController classes
+
+- services/
+  = @Service business logic
+
+- README.md
+  = same purpose in all projects
+
+
+Spring Boot project:
+- build.gradle
+  = package.json
+
+- settings.gradle
+  = project metadata (no real Node equivalent)
+
+- gradlew / wrapper
+  = pinned Gradle version (Node equivalent = Node version via nvm)
+
+- src/main/java/*
+  = backend source
+
+- application.yml
+  = runtime config
+
+- src/test/java/*
+  = tests
+
+---------------------------------------------------
+B) FRONTEND (React/Vite) vs Spring Boot UI assets
+---------------------------------------------------
+
+React (Vite):
+- package.json
+  = build.gradle
+
+- vite.config.js
+  = application.yml + dev server proxy + build settings
+
+- eslint.config.js
+  = Checkstyle / SpotBugs / SonarLint rules
+  (code quality & formatting rules — NOT runtime behavior)
+
+- index.html
+  = static HTML entry page (like static/index.html)
+
+- src/main.jsx
+  = UI bootstrap (launches app)
+
+- src/App.jsx
+  = main UI page
+
+- src/components/*
+  = UI views/templates
+
+- public/
+  = src/main/resources/static
+
+Spring Boot UI:
+- static/
+  = built React files live here in production
+
+----------------------------------------------------------------------
+2) COMMANDS: Spring Boot (Gradle) vs Node/React (npm)
+----------------------------------------------------------------------
+
+Install dependencies
+Spring Boot:
+  ./gradlew build
+
+Node:
+  npm install
+
+
+Run app (dev)
+Spring Boot:
+  ./gradlew bootRun
+
+Node backend:
+  node index.js
+  or npx nodemon index.js
+
+React:
+  npm run dev
+
+
+Build production
+Spring Boot:
+  ./gradlew clean build
+
+React:
+  npm run build
+
+
+Run tests
+Spring Boot:
+  ./gradlew test
+
+Node:
+  npm test
+
+
+Clean build
+Spring Boot:
+  ./gradlew clean
+
+React:
+  delete dist/ manually
+
+
+Refresh dependencies
+Spring Boot:
+  ./gradlew clean build --refresh-dependencies
+
+Node:
+  delete node_modules + package-lock.json
+  npm install
+
+
+Dependency tree
+Spring Boot:
+  ./gradlew dependencies
+
+Node:
+  npm ls
+
+
+----------------------------------------------------------------------
+3) FULL STACK LOCAL DEV
+----------------------------------------------------------------------
+
+Typical setup:
+Backend: http://localhost:3000
+Frontend: http://localhost:5173
+
+Vite proxies /api → backend
+
+Spring Boot equivalent:
+One server OR frontend calling backend APIs
+
+----------------------------------------------------------------------
+4) RESPONSIBILITIES
+----------------------------------------------------------------------
+
+Spring Boot
+Controllers → endpoints
+Services → logic
+Repository → DB
+
+Node/Express
+Routes → endpoints
+Functions → logic
+db.js → DB
+
+React
+Components → UI
+State → UI data
+fetch() → API calls
+
+----------------------------------------------------------------------
+5) MODERN JAVASCRIPT RULES (IMPORTANT)
+----------------------------------------------------------------------
+
+var → OLD (avoid)
+let → changeable variable
+const → preferred default (use unless it must change)
+
+Always:
+Use const first
+Use let only if reassigned
+
+Template strings:
+`Hello ${name}`
+(replaces string concatenation)
+
+----------------------------------------------------------------------
+6) YOUR PROJECT STRUCTURE
+----------------------------------------------------------------------
+
+fullstack-javascript-learning/
+  javascript-course/      = vanilla JS learning
+  node-backend-basics/    = backend API
+  react-frontend/         = UI
+
+This is normal for learning.
+
+----------------------------------------------------------------------
+7) TESTING FOLDERS — Spring Boot vs JavaScript
+----------------------------------------------------------------------
+
+JUnit vs Jest
+
+Spring Boot:
+- src/test/java/
+  = Unit tests (JUnit, Mockito)
+
+- src/test/resources/
+  = test configs, mock JSON, test data files
+
+
+Node / React equivalent:
+
+Node backend:
+- tests/   or   __tests__/
+  = JUnit test classes equivalent
+  (Jest, Mocha, Supertest)
+
+Example:
+  tests/users.test.js
+  tests/api.test.js
+
+Test data:
+- tests/data/
+  = src/test/resources
+
+
+React frontend:
+- src/__tests__/
+  = component tests
+
+Examples:
+  App.test.jsx
+  UserList.test.jsx
+
+Libraries used:
+- Jest (default)
+- React Testing Library
+
+
+Important:
+You currently DON'T have tests because:
+You created learning projects manually.
+
+Framework generators normally add them automatically:
+- Spring Initializr → adds test folder
+- create-react-app → adds tests
+- Vite → minimal setup (no tests by default)
+- Node Express → none by default
+
+
+So your projects are normal 👍
+You just haven’t added a testing framework yet.
+
