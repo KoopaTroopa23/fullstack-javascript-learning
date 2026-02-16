@@ -92,7 +92,7 @@ x--;  // subtract 1
 // LOGICAL OPERATORS
 // =====================================================
 
-&&  // AND (both true)
+&&  // AND (both true)  checks both conditions
 ||  // OR (one true)
 !   // NOT (reverse boolean)
 

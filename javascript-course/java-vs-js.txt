@@ -1,3 +1,92 @@
+
+👉 React = what you build
+👉 Vite = what runs/builds it - 
+DOM = the page structure in the browser that JavaScript can read and change
+React → library for building UI behavior (how the page works & updates)
+Bootstrap → library for styling UI appearance (how the page looks)
+src/App.jsx - main UI component - homepage. 
+index.html
+   ↓ loads
+src/main.jsx   → starts React
+   ↓ renders
+src/App.jsx    → YOU edit this
+   ↓ uses
+components/*
+
+Node commands = run a single JavaScript file
+node index.js
+node app.js
+
+
+npm commands = run project tasks - allows Vite to work
+npm install   ← download dependencies
+npm run dev   ← start dev server (React/Vite)
+npm start     ← start backend (often)
+npm test      ← run tests
+npm run build ← build production app
+
+
+npm looks inside package.json
+Finds "dev": "vite"
+npm runs Vite
+Vite starts React app
+
+
+node starts individual files. 
+node filename.js
+
+Focus:
+
+Variables
+Most Common      Very Common        Avoid / Rare
+const            let                var
+
+Control Flow
+Most Common      Very Common        Less Common
+if / else        ternary ? :        switch
+
+Functions
+Most Common      Very Common        Less Common
+arrow functions  normal functions   constructor functions
+
+Operators
+Most Common                Very Common            Less Common
+=== !==                    &&  ||                 ??
+> < >= <=                  !                      bitwise operators
+
+Arrays
+Most Common      Very Common         Less Common
+.map()           .filter()           .reduce()
+.find()          .includes()         .some() / .every()
+
+Loops
+Most Common        Very Common        Less Common
+for...of           .forEach()         classic for loop
+
+Objects
+Most Common            Very Common            Less Common
+dot notation           destructuring          Object.create()
+(obj.name)             ({name} = obj)
+
+DOM (Real Job Work)
+Most Common                  Very Common            Less Common
+querySelector                querySelectorAll       getElementById
+addEventListener             input.value            manual DOM traversal
+textContent / innerText      classList              innerHTML heavy usage
+
+Async (Critical)
+Most Common        Very Common          Less Common
+fetch()            async/await          .then chains
+JSON handling      try/catch            XMLHttpRequest
+
+React Prep Concepts
+Most Common        Very Common        Less Common
+state thinking     immutability       classes
+conditional UI     array rendering    lifecycle memorization
+
+
+
+
 ======================================================================
 SPRING BOOT (GRADLE) vs JAVASCRIPT (NODE + REACT) — QUICK REFERENCE
 ======================================================================
@@ -66,6 +155,7 @@ Spring Boot project:
 ---------------------------------------------------
 B) FRONTEND (React/Vite) vs Spring Boot UI assets
 ---------------------------------------------------
+
 
 React (Vite):
 - package.json
