@@ -16,7 +16,7 @@ const hasGoodVision = true;
 
 console.log(hasDriversLicense && hasGoodVision);   // AND
 console.log(hasDriversLicense || hasGoodVision);   // OR
-console.log(!hasDriversLicense);  // NOT
+console.log(!hasDriversLicense);  // reverses a value  (false becomes true)  etc. 
 
 const shouldDrive = hasDriversLicense && hasGoodVision;
 

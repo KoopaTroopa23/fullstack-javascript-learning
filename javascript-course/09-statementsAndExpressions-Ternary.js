@@ -38,7 +38,7 @@ if (age >= 18) {
 console.log(drink2);
 
 
-// Coding Challenge
+// Template literal interpolation with Ternary Expression
 
 const bill = 275;
 
@@ -47,3 +47,17 @@ const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 const total = bill + tip;
 
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${total}`);
+
+
+// Test 1  
+const memberAge = 16;
+const restrictAge = memberAge >= 18 ? "Full Access" : "Limited Access";
+console.log(`Access level: ${restrictAge}`);
+
+// Test 2
+
+const ageOne = 22;
+const isAllowed = true;
+const access = ageOne >= 18 && !isAllowed ? "Premium Access" : "Access Denied";
+console.log(`You have: ${access}`);
+

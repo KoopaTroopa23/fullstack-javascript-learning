@@ -82,7 +82,7 @@ console.log(car.describe());
 // Final thoughts
 
 
-const car = {                      // javascript object
+const carOne = {                      // javascript object
     brand: "Toyota",
     year: 2020,
 
@@ -95,12 +95,12 @@ const car = {                      // javascript object
     }
 };
 
-console.log(car.checkAge());
+console.log(carOne.checkAge());
 
 //  Remember your test case - Once JS gets to first true then it will only print that UNLESS you have && 
 
 
-const car = {                        // javascript object
+const carTwo = {                        // javascript object
     brand: "Toyota",
     year: 2020,
     model: "Corolla Cross",
@@ -119,6 +119,36 @@ checkAgeOwner: function () {                                          // method 
 }
 };
 
-// this.  is a keyword that refers to the object that is running the method.
+console.log(carTwo.checkAgeOwner());
+
+// this.  is a keyword that refers to the object that is running the method.     keywords  this   MUST BE USED INSIDE METHOD
 // return sends a value back from the function to whoever called it — and then the function stops running.
 
+
+
+const user = {
+    firstName: "Kevin",        //  property : value
+    lastName: "W",
+    age: 45,
+    isMember: true,
+
+   getstatus: function () {
+    return this.isMember ? "Full Member" : "Guest";             //  this is required,  means Get the name from THIS object. 
+   }
+};
+
+
+const student = {
+    firstName: "Jessica",
+    lastName: "Daffy",
+    birthYear: 1981,
+    hasLicense: true,
+
+    calcAge: function () {
+        return 2026 - this.birthYear;    
+    },
+    getSummary: function () {
+        return `${this.firstName} ${this.lastName} is ${this.calcAge()} years old and ${this.hasLicense ? "has" : "does not have" } a driver's license`;    
+    }
+}
+console.log(student.getSummary());

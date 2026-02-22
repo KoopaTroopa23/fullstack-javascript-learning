@@ -3,7 +3,11 @@
  Keep this open while learning — explains operators + built-ins
 **********************************************************************/
 
+HTML → DOM → JavaScript → Updates UI
 
+
+live object representation of your HTML page that JavaScript can read and change.
+When you click the button, the browser triggers a click event, and JavaScript runs the function attached to that event, which updates the DOM.
 
 // =====================================================
 // VARIABLES

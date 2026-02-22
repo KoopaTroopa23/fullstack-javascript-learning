@@ -10,7 +10,7 @@ console.log(Boolean(''));            // false empty string
 
 
 const money = 0;
-if(money) {                     // Js will try to convert to a Boolean = 0 which is false
+if(money) {                     // JS will try to convert to a Boolean = 0 which is false
     console.log("Don't spend it all");
 } else { 
     console.log("You need a job");
