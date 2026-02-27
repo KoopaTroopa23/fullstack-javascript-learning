@@ -104,10 +104,10 @@ These MODIFY an existing variable.
 
 let y = 10 + 5;   // y starts as 15
 
-y += 10;  // same as: y = y + 10  -> 25
-y *= 4;   // same as: y = y * 4   -> 100
-y++;      // same as: y = y + 1   -> 101
-y--;      // same as: y = y - 1   -> 100
+y += 10;  // same as: y = 15 + 10  -> 25
+y *= 4;   // same as: y = 25 * 4   -> 100
+y++;      // same as: y = 100 + 1   -> 101
+y--;      // same as: y = 101 - 1   -> 100
 
 console.log(y);
 

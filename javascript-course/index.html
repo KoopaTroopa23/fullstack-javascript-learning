@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<!-- Tells the browser this is an HTML5 document -->
-
 <html lang="en">
-<!-- Root element of the page. lang="en" helps accessibility and SEO -->
-
 <head>
-    <!-- Head contains metadata (not visible on page) -->
-
-    <meta charset="UTF-8">
-    <!-- Defines character encoding (supports normal letters, symbols, etc.) -->
-
-    <title>JavaScript Practice</title>
-    <!-- Text shown in browser tab -->
-
-    <link rel="stylesheet" href="style.css">
-    <!-- Links external CSS file for styling -->
+  <meta charset="UTF-8" />
+  <title>JavaScript Course</title>
+  <link rel="stylesheet" href="../css/global.css">
 </head>
 
 <body>
-    <!-- Body contains visible content -->
 
-    <h1>JavaScript Practice Page</h1>
-    <!-- Main heading -->
+  <h1>JavaScript Course Files</h1>
 
-    <p id="message">Click the button</p>
-    <!-- Paragraph element. id="message" allows JavaScript to select it -->
+<div class="button-container">
+    <button onclick="runFile('01-functions.js')">01 - Functions</button>
+    <button onclick="runFile('02-js-fundamentals.js')">02 - Fundamentals</button>
+    <button onclick="runFile('03-truthy-falsy-values.js')">03 - Truthy/Falsy</button>
+    <button onclick="runFile('04-boolean-log-operators.js')">04 - Boolean Operators</button>
+    <button onclick="runFile('05-if-else.js')">05 - If/Else</button>
+    <button onclick="runFile('06-equality-operator.js')">06 - Equality Operator</button>
+    <button onclick="runFile('07-type-conversion-coercion.js')">07 - Type Conversion</button>
+    <button onclick="runFile('08-objects-basics.js')">08 - Objects Basics</button>
+    <button onclick="runFile('09-statementsAndExpressions-Ternary.js')">09 - Ternary</button>
+    <button onclick="runFile('10-switch-statements.js')">10 - Switch</button>
+    <button onclick="runFile('11-debugging-practice.js')">11 - Debugging Practice</button>
+</div>
 
-    <button id="btn">Click Me</button>
-    <!-- Button element. id="btn" allows JavaScript to select it -->
+  <p id="status">Click a lesson to run it (check Console).</p>
 
-    <script src="06-equality-operator.js"></script>
-    <!-- Links external JavaScript file -->
-    <!-- Placed at bottom so HTML loads before JS runs -->
+<script>
+  async function runFile(fileName) {
+    // Update status
+    document.getElementById("status").textContent = `Running: ${fileName} (check Console)`;
+
+    // Fetch the JS file as text
+    const response = await fetch(fileName);
+    const code = await response.text();
+
+    // Wrap the code so variables don't leak globally
+    const wrapped = `(function(){\n${code}\n})();`;
+
+    // Run it
+    try {
+      eval(wrapped);
+    } catch (err) {
+      console.error("Lesson error:", err);
+    }
+  }
+</script>
+
 
 </body>
 </html>

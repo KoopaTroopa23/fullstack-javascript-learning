@@ -27,10 +27,18 @@ if (favNumber === 23) { // if you use === like you should then this will be fals
 
 // different operator
 
-if (favNumber !== 23) console.log("Why not 23?");  //  != loose version !== strict
+if (favNumber !== 23) console.log("Why not 23?");  
 
-
+//  != loose version !== strict
 //  !==  not equal to
 
       
-   // Cannoit run with node because prompt and alert is only for browsers, it will give you an error if you try to run it with node.
+   // Cannot run with node because prompt and alert is only for browsers, it will give you an error if you try to run it with node.
+
+  
+//         Quick Summary Table
+// Operator	      Name   	       Checks Type?	Recommended?
+// ===	     Strict equal	         ✅ Yes	✅ Always
+// ==	Loose equal	❌ No	❌ Avoid
+// !==	        Strict not equal	✅ Yes	✅ Always
+// !=	Loose not equal	❌ No	❌ Avoid

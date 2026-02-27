@@ -49,6 +49,8 @@ const total = bill + tip;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${total}`);
 
 
+// Ternary  ? (then)   : (else)
+
 // Test 1  
 const memberAge = 16;
 const restrictAge = memberAge >= 18 ? "Full Access" : "Limited Access";

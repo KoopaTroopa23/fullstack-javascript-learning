@@ -9,6 +9,13 @@
 
 
 
+
+// Type	Example
+// Function Declaration	function calc() {}
+// Function Expression	const calc = function() {}
+// Anonymous Function	function() {} (no name)
+// Arrow Function	const calc = () => {}
+
 function logger () {
     console.log("My name is Kevin");                                           //  {} = function buddy                                       
 }

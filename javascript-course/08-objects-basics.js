@@ -125,7 +125,7 @@ console.log(carTwo.checkAgeOwner());
 // return sends a value back from the function to whoever called it — and then the function stops running.
 
 
-
+// test 1
 const user = {
     firstName: "Kevin",        //  property : value
     lastName: "W",
@@ -137,6 +137,8 @@ const user = {
    }
 };
 
+
+// test 2 
 
 const student = {
     firstName: "Jessica",
@@ -152,3 +154,60 @@ const student = {
     }
 }
 console.log(student.getSummary());
+
+
+//  test 3
+
+const bankAccount = {
+      owner: "Kevin",
+      balance: 15000,
+      
+      deposit: function(amount) {
+        this.balance += amount;     // this.balance = this.balance + amount;
+        return this.balance;
+      },
+      withdraw: function (amount) {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+           return "Withdrawal successful";
+        } else {
+            console.log("Insuffient Funds");
+      }
+    },  
+      getSummaryOne: function () {
+        return `${this.owner} has $${this.balance} in the account`;
+      }
+    };   // Semicolon only after the whole object ends
+            
+bankAccount.deposit(200);
+bankAccount.withdraw(100);
+console.log(bankAccount.getSummaryOne());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -65,3 +65,105 @@ if (userLoggedIn && userAge >= 18 && !isAllowed) {
 } else {
     console.log("You dont not match the criteria");
 }
+
+// Test 2
+
+const userName = "Kevin";
+const password = "1234";
+
+if (userName === "Kevin" && password === "123") {
+    console.log("Login Successful");
+} else {
+    console.log("Invalid Credentials");
+}
+
+
+// test 3
+
+const ageFour = 17;
+const hasID = true;
+
+if (ageFour > 17 && hasID === true) {
+    console.log("You may enter the gym");
+} else if (ageFour < 18) {
+     console.log("You are too young");    
+} else  {
+    console.log("You must bring an ID");
+}
+
+
+// test 4
+
+const accessAge = 16;
+const hasParentPermission = true;
+
+if (accessAge >= 18) {
+    console.log("You can watch the move");
+} else if (accessAge >= 13 && hasParentPermission === true) {
+    console.log("You can watch with parental permission");
+} else {
+    console.log("You are not allow to watch this movie");
+}
+
+
+// test 5 - nested
+
+const accountBalance = 500;
+const withdrawAmount = 200;
+const isAccountActive= true;
+
+if (isAccountActive) {
+    if (withdrawAmount <= accountBalance) {
+        console.log("Withdrawal approved");
+    } else { 
+        console.log("Insufficient funds");      
+    } 
+} else {
+    console.log ("Account is not active");
+}
+
+
+
+
+
+
+// test 6
+
+const hasResume = true;
+const yearsExperience = 3;
+const hasDegree = false;
+
+if (hasResume) {
+    if (yearsExperience >= 5) {
+        console.log("Senior Position eligible");
+    } else if (hasDegree === true) {
+        console.log("Junior position eligible");
+    } else {
+        console.log("Not qualified");
+    }
+  } else {
+    console.log("Application Incompleted");
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

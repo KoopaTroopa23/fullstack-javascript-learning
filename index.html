@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Full Stack Learning Dashboard</title>
+ <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+  <h1>Full Stack Learning Dashboard</h1>
+
+  <div class="button-container">
+    <button onclick="openSection('javascript-course')">JavaScript Course</button>
+
+    <button onclick="openSection('node-backend-basics')">Node Backend Basics</button>
+
+    <button onclick="openSection('react-frontend')">React JS</button>
+  </div>
+
+  <script>
+    function openSection(folderName) {
+      window.location.href = folderName; // goes to /javascript-course, /node-backend-basics, etc.
+    }
+  </script>
+
+</body>
+</html>
