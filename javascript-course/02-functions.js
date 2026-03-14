@@ -248,7 +248,7 @@ console.log(totalSumTwo);
 
 //  test 9
 
-function checkNumber (numb4) {
+function checkNumberOne (numb4) {
        if (numb4 > 0) {
          return "Positive Number";
         } else if (numb4 < 0) {
@@ -257,7 +257,7 @@ function checkNumber (numb4) {
        return "Zero";
         }
 }
-const numb4Total = checkNumber(-4);
+const numb4Total = checkNumberOne(-4);
 console.log(numb4Total);
 
 

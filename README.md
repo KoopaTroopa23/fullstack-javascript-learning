@@ -117,9 +117,6 @@ npm start
 
 # Purpose
 
----
-
-# Purpose
 
 This repository serves as:
 

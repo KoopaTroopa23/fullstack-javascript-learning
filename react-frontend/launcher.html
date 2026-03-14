@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Frontend</title>
+   <link rel="stylesheet" href="../css/global.css">
+</head>
+
+<body>
+
+    <h1>React Frontend</h1>
+
+    <div class="button-container">
+        <button onclick="openReact()">Open React App</button>
+        <button onclick="showInstructions()">How To Run React</button>
+    </div>
+
+    <pre id="instructions" style="margin-top:20px;"></pre>
+
+   <script>
+function openReact() {
+    window.open("http://localhost:5173", "_blank");
+}
+
+function showInstructions() {
+    document.getElementById("instructions").textContent =
+`To run your React app:
+
+1. Open VS Code Terminal
+2. cd react-frontend
+3. npm install
+4. npm run dev   (Vite)
+   OR
+   npm start     (Create React App)
+
+Then open the localhost URL shown in terminal.`;
+}
+</script>
+
+</body>
+</html>
