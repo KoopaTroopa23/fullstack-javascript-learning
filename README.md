@@ -5,9 +5,17 @@ Learning repository for mastering full-stack JavaScript development.
 This repository documents my structured journey learning **modern full-stack JavaScript development**.
 
 The project is organized into multiple sections covering **JavaScript fundamentals, backend development, and frontend frameworks**.
+
 ---
 
 # Repository Structure
+
+
+## Root Project
+
+The root of this repository contains a separate JavaScript/Node project in addition to the subfolders below.
+
+This repository is organized as a multi-project workspace, with different folders covering JavaScript fundamentals, backend development, and React frontend practice.
 
 ## JavaScript Fundamentals
 
@@ -85,3 +93,4 @@ This repository serves as:
 * A **learning journal** documenting my JavaScript and full-stack development progress
 * A **developer portfolio project**
 * A **reference for JavaScript and backend concepts**
+
