@@ -10,6 +10,7 @@ The project is organized into multiple sections covering **JavaScript fundamenta
 
 # Repository Structure
 
+```text
 fullstack-javascript-learning/
 ├── README.md
 ├── css/
@@ -20,7 +21,7 @@ fullstack-javascript-learning/
 ├── index.js
 ├── package.json
 └── package-lock.json
-
+```
 
 ## Root Project
 
