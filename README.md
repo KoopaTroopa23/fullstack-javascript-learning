@@ -98,6 +98,27 @@ Global CSS styles used across example frontend projects.
 
 ---
 
+# Quick Start
+
+## Root Project
+```bash
+npm install
+npm start
+```
+
+## Node Backend Basics
+```bash
+cd node-backend-basics
+npm install
+npm start
+```
+
+---
+
+# Purpose
+
+---
+
 # Purpose
 
 This repository serves as:
