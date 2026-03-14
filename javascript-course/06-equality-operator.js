@@ -42,3 +42,54 @@ if (favNumber !== 23) console.log("Why not 23?");
 // ==	Loose equal	❌ No	❌ Avoid
 // !==	        Strict not equal	✅ Yes	✅ Always
 // !=	Loose not equal	❌ No	❌ Avoid
+
+
+// test 1
+
+let username = "admin";
+let password = "1234";
+
+if (username === "admin" && password === "1234") {
+   console.log("Login successful.");
+} else {
+   console.log("Invalid credentials");
+}
+
+
+
+// test 2
+
+const userName = "kevin";
+const pinNumber = 4321;
+const role = "banned";
+
+if (userName === "kevin" && pinNumber === 4321 && role !== "banned") {
+   console.log("Access granted. Welcome inside");
+} else {
+   console.log("Access Denied");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

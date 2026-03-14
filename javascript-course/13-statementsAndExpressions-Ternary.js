@@ -63,3 +63,25 @@ const isAllowed = true;
 const access = ageOne >= 18 && !isAllowed ? "Premium Access" : "Access Denied";
 console.log(`You have: ${access}`);
 
+
+
+// test 3
+
+const ageTwo = 20;
+const status = ageTwo >= 20 ? "Adult" : "Minor";
+console.log(status);
+
+// It’s either:
+// if / else
+// OR
+// ternary
+
+// Not both.
+
+
+//  test 4   --  boolean ternary
+
+const isLoggedIn = true;
+const statusOne = isLoggedIn ? "Welcome back" : "Please log in";
+console.log(statusOne);
+

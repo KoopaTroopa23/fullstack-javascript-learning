@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Master Reference</title>
+
+  <!-- Use your global styling -->
+  <link rel="stylesheet" href="../css/global.css" />
+
+  <style>
+    /* Page-specific styling */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+    h2 {
+      margin: 26px 0 10px;
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    }
+    .muted {
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+    pre {
+      margin: 10px 0 0;
+      padding: 14px;
+      border-radius: 12px;
+      overflow: auto;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.08);
+      line-height: 1.45;
+      font-size: 14px;
+      white-space: pre; /* keep formatting */
+    }
+    code { font-family: Consolas, Monaco, "Courier New", monospace; }
+    .top-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .top-actions a button {
+      border-radius: 999px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <h1>JavaScript Master Reference</h1>
+
+    <div class="top-actions">
+      <a href="./index.html"><button>← Back to JS Course</button></a>
+      <a href="../index.html"><button>🏠 Dashboard</button></a>
+    </div>
+
+    <div class="card">
+      <p class="muted">
+        Keep this open while learning — quick reference for operators + built-ins.
+      </p>
+
+      <h2>Big Picture</h2>
+      <pre><code>HTML → DOM → JavaScript → Updates UI
+
+DOM = live object representation of your HTML page that JavaScript can read and change.
+When you click a button, the browser triggers a click event, and JavaScript runs the function attached to that event, which updates the DOM.</code></pre>
+
+      <h2>Variables</h2>
+      <pre><code>const constantValue = 10;   // cannot change
+let changeableValue = 20;   // can change
+var oldStyle = 30;          // avoid using (old JS)</code></pre>
+
+      <h2>Data Types</h2>
+      <pre><code>let numberType = 5;           // Number
+let textType = "Hello";       // String
+let booleanType = true;       // Boolean
+let nothing = null;           // Intentional empty value
+let notAssigned;              // Undefined
+let list = [1,2,3];           // Array
+let person = {name: "Kevin"}; // Object</code></pre>
+
+      <h2>Arithmetic Operators</h2>
+      <pre><code>+   // addition
+-   // subtraction
+*   // multiplication
+/   // division
+%   // remainder (modulus)
+**  // power (exponent)
+
+let a = 10 + 5;     // 15
+let b = 10 % 3;     // 1
+let c = 2 ** 3;     // 8</code></pre>
+
+      <h2>Assignment Operators</h2>
+      <pre><code>let x = 10;
+
+x += 5;   // x = x + 5
+x -= 5;   // x = x - 5
+x *= 2;   // x = x * 2
+x /= 2;   // x = x / 2
+x %= 3;   // remainder
+x **= 2;  // power</code></pre>
+
+      <h2>Increment / Decrement</h2>
+      <pre><code>x++;  // add 1
+x--;  // subtract 1</code></pre>
+
+      <h2>Comparison Operators</h2>
+      <pre><code>==   // equal value (loose)
+===  // equal value + type (STRICT — USE THIS)
+!=   // not equal
+!==  // strict not equal
+>    // greater than
+<    // less than
+>=   // greater or equal
+<=   // less or equal
+
+5 == "5"   // true  (bad)
+5 === "5"  // false (good)</code></pre>
+
+      <h2>Logical Operators</h2>
+      <pre><code>&&  // AND (both true)
+||  // OR (one true)
+!   // NOT (reverse boolean)</code></pre>
+
+      <h2>String Operations</h2>
+      <pre><code>let first = "Kevin";
+let last = "Wingfield";
+
+first + " " + last
+`${first} ${last}`     // template literal (BEST)</code></pre>
+
+      <h2>String Methods</h2>
+      <pre><code>first.length
+first.toUpperCase()
+first.toLowerCase()
+first.includes("v")
+first.startsWith("K")
+first.endsWith("n")
+first.slice(0,3)
+first.replace("Kevin","Bob")
+first.split("")</code></pre>
+
+      <h2>Number Methods</h2>
+      <pre><code>Number("10")
+parseInt("10px")
+parseFloat("10.5")
+
+(10.234).toFixed(2)
+Math.round(4.6)
+Math.floor(4.9)
+Math.ceil(4.1)
+Math.max(1,5,3)
+Math.min(1,5,3)
+Math.random()</code></pre>
+
+      <h2>Array Methods</h2>
+      <pre><code>let arr = [1,2,3];
+
+arr.push(4)
+arr.pop()
+arr.unshift(0)
+arr.shift()
+
+arr.includes(2)
+arr.indexOf(3)
+arr.join(",")
+arr.slice(1,3)
+arr.splice(1,1)
+
+arr.forEach(x => console.log(x))
+arr.map(x => x * 2)
+arr.filter(x => x > 1)
+arr.find(x => x === 2)
+arr.reduce((a,b)=>a+b,0)</code></pre>
+
+
+<h2>Dot Notation (.) vs Bracket Notation ([ ])</h2>
+<pre><code>// Dot notation = object.property
+const user = { name: "Kevin", age: 45 };
+
+user.name       // "Kevin"
+user.age        // 45
+
+// Bracket notation = object["property"]
+user["name"]    // "Kevin"
+user["age"]     // 45
+
+// Bracket notation is required when the key is stored in a variable:
+const key = "name";
+user[key]       // "Kevin"</code></pre>
+
+
+
+      <h2>Object Methods</h2>
+      <pre><code>let user = {name:"Kevin", age:46};
+
+user.name
+user["age"]
+
+Object.keys(user)
+Object.values(user)
+Object.entries(user)</code></pre>
+
+      <h2>Type Checking</h2>
+      <pre><code>typeof 5
+typeof "hi"
+typeof true
+Array.isArray(arr)</code></pre>
+
+      <h2>Conditionals</h2>
+      <pre><code>if (age > 18) {}
+else if (age === 18) {}
+else {}
+
+age > 18 ? "adult" : "minor";</code></pre>
+
+      <h2>Loops</h2>
+      <pre><code>for (let i=0;i<5;i++) {}
+while (x < 10) {}
+for (const item of arr) {}</code></pre>
+
+      <h2>Functions</h2>
+      <pre><code>function add(a,b){
+  return a+b;
+}
+
+const add2 = (a,b)=>a+b;</code></pre>
+
+      <h2>Truthy / Falsy</h2>
+      <pre><code>// FALSY:
+false
+0
+""
+null
+undefined
+NaN
+
+// everything else = TRUE</code></pre>
+
+      <h2>Async</h2>
+      <pre><code>async function getData(){
+  const data = await fetch("url");
+  const json = await data.json();
+}</code></pre>
+
+      <h2>DOM</h2>
+      <pre><code>document.querySelector("#id")
+document.querySelectorAll(".class")
+element.textContent = "Hello"
+element.addEventListener("click", ()=>{})</code></pre>
+    </div>
+  </div>
+</body>
+</html>

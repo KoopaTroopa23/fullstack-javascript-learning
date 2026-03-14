@@ -1,3 +1,5 @@
+"use strict";
+
 const age = 19;
 const isOldEnough = age >= 18;
 
@@ -146,12 +148,63 @@ if (hasResume) {
   }
 
 
+  // test 7
+
+const ageFive = 18;
+
+if (ageFive >= 18) {
+    console.log("You can watch the movie");
+} else if (ageFive >= 13) {
+    console.log("You need parental guidance");
+} else {
+    console.log("You are now allowed to watch this movie");
+}
+
+  
+// test 8
+
+const ageSix = 21;
+const hasVipPass = true;
+
+if (ageSix >= 21 && hasVipPass) {
+    console.log("You are allowed in");
+} else if (ageSix >= 21) {
+    console.log("You need a VIP Pass");
+} else {
+    console.log("You are too young for this event");
+}
 
 
+// test 9
 
+const ageSeven = 21;
+const hasVipPassTwo = true;
+const onGuestList = true;
 
+if (ageSeven < 21) {
+  console.log("You are too young.");
+} else if (!hasVipPassTwo && !onGuestList) {
+  console.log("Access denied.");
+} else {
+  // Allowed in (21+ and has VIP OR guest list)
+  if (hasVipPassTwo && onGuestList) {
+    console.log("Welcome VIP Elite.");
+  } else {
+    console.log("Welcome to the club.");
+  }
+}
 
+// test 10
 
+const age8 = 16;
+
+if (age8 < 13) {
+    console.log("Too young for the event");
+} else if (age8 < 18) {
+    console.log("Teen ticket required");
+} else {
+    console.log("Adult Ticket");
+}
 
 
 

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Dev Reference</title>
+
+  <!-- Use the SAME stylesheet your course uses -->
+ <link rel="stylesheet" href="../css/global.css">
+
+  <style>
+    /* Small page-specific tweaks (safe to keep here) */
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    .top-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 14px 0 26px; }
+    .card { max-width: 980px; margin: 0 auto 18px; padding: 22px; border-radius: 16px; background: rgba(255,255,255,0.06); box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .card h2 { margin: 0 0 10px; }
+    .muted { opacity: 0.85; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.10); }
+    th { opacity: 0.9; }
+
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    pre {
+      padding: 14px;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.35);
+      overflow: auto;
+    }
+    ul { margin: 8px 0 0 18px; }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrap">
+    <h1>Web Development Reference</h1>
+
+    <div class="top-actions">
+      <button onclick="window.location.href='index.html'">← Back to JS Course</button>
+      <button onclick="window.location.href='../index.html'">🏠 Dashboard</button>
+    </div>
+
+    <div class="card">
+      <h2>Technologies</h2>
+      <p class="muted">What they are + why they matter.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tech</th>
+            <th>What it is</th>
+            <th>Why it matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>JavaScript</td><td>Language</td><td>Core skill</td></tr>
+          <tr><td>React</td><td>UI library</td><td>Build interfaces</td></tr>
+          <tr><td>Angular</td><td>Frontend framework</td><td>Structured frontend apps</td></tr>
+          <tr><td>Node.js</td><td>Runtime</td><td>Runs JS on server</td></tr>
+          <tr><td>Next.js</td><td>Fullstack framework</td><td>React + backend together</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>HTTP & APIs</h2>
+      <p><strong>HTTP Request:</strong> Browser asks a server for something (page, data, login, etc.)</p>
+      <p><strong>API:</strong> A set of server endpoints the frontend communicates with</p>
+
+      <p><strong>Endpoint Examples:</strong></p>
+      <pre><code>GET    /users
+POST   /login
+PUT    /users/1
+DELETE /users/1</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>CRUD Operations</h2>
+      <pre><code>Create  -> POST        -> Add new data
+Read    -> GET         -> Retrieve data
+Update  -> PUT/PATCH   -> Modify data
+Delete  -> DELETE      -> Remove data</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Async (Asynchronous Programming)</h2>
+      <p>Code continues running while waiting for data.</p>
+      <p><strong>Used for:</strong></p>
+      <ul>
+        <li>API requests</li>
+        <li>Database queries</li>
+        <li>Timers</li>
+        <li>File loading</li>
+      </ul>
+      <p><strong>Behavior:</strong> Page loads → user can interact → data arrives later</p>
+    </div>
+
+    <div class="card">
+      <h2>State</h2>
+      <p>The data your UI currently remembers.</p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>Logged in user</li>
+        <li>Form input text</li>
+        <li>Counter value</li>
+        <li>Shopping cart items</li>
+      </ul>
+      <p>When state changes → UI updates.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Flow</h2>
+      <pre><code>User -> Frontend -> API -> Server -> Database
+User <- Frontend <- API <- Server <- Response</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Debugging</h2>
+      <p>Finding where program behavior differs from expectation.</p>
+      <p><strong>Tools:</strong></p>
+      <ul>
+        <li><code>console.log()</code></li>
+        <li>breakpoints</li>
+        <li>stepping through code</li>
+      </ul>
+      <p><strong>Goal:</strong> locate incorrect logic and fix it.</p>
+    </div>
+  </div>
+</body>
+</html>

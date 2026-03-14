@@ -186,6 +186,28 @@ console.log(bankAccount.getSummaryOne());
 
 
 
+const userSix = {
+    username: "Kevin",
+    age: 45,
+    isAdmin: true
+};
+
+          // Dot notation
+      console.log(userSix.username);
+     // Bracket notation
+     console.log(userSix["age"]);
+    
+    if (userSix.isAdmin) {
+    console.log("Admin acces granted");
+    } else {
+        console.log("Regular user");
+ }
+
+
+
+
+
+
 
 
 

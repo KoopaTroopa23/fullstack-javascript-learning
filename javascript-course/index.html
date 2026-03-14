@@ -22,12 +22,20 @@
     <button onclick="runFile('09-statementsAndExpressions-Ternary.js')">09 - Ternary</button>
     <button onclick="runFile('10-switch-statements.js')">10 - Switch</button>
     <button onclick="runFile('11-debugging-practice.js')">11 - Debugging Practice</button>
+    <button onclick="window.location.href='javascript-reference.html'">12 - JavaScript Reference</button>
+    <button onclick="window.location.href='web-dev-reference.html'">13 - Web Dev Reference</button>
 </div>
 
   <p id="status">Click a lesson to run it (check Console).</p>
 
 <script>
   async function runFile(fileName) {
+    // ✅ If it's an HTML page, OPEN it (don't fetch/eval)
+    if (fileName.endsWith(".html")) {
+      window.location.href = fileName;
+      return;
+    }
+
     // Update status
     document.getElementById("status").textContent = `Running: ${fileName} (check Console)`;
 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rules & Never-Do’s</title>
+
+  <link rel="stylesheet" href="../css/global.css" />
+
+  <style>
+    .page { max-width: 1100px; margin: 0 auto; text-align: left; }
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+    .top-actions { display:flex; gap:12px; flex-wrap:wrap; margin: 14px 0 18px; }
+    .top-actions a button { border-radius: 999px; }
+    h2 { margin: 22px 0 10px; font-size: 20px; }
+    ul { margin: 8px 0 0 18px; line-height: 1.6; }
+    pre {
+      margin: 10px 0 0;
+      padding: 14px;
+      border-radius: 12px;
+      overflow: auto;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.08);
+      line-height: 1.45;
+      font-size: 14px;
+      white-space: pre;
+    }
+    code { font-family: Consolas, Monaco, "Courier New", monospace; }
+    .muted { opacity: 0.85; }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <h1>Rules & Never-Do’s</h1>
+
+    <div class="top-actions">
+      <a href="./index.html"><button>← Back to JS Course</button></a>
+      <a href="../index.html"><button>🏠 Dashboard</button></a>
+      <a href="./javascript-reference.html"><button>📘 JS Reference</button></a>
+    </div>
+
+    <div class="card">
+      <p class="muted">These are “best practice defaults” for your learning. They’re not laws, but they’ll keep your code clean.</p>
+
+      <h2>Functions</h2>
+      <ul>
+        <li><strong>Do:</strong> use <code>return</code> to give back a value.</li>
+        <li><strong>Do:</strong> <code>console.log()</code> outside the function when you want to display results.</li>
+        <li><strong>Never do:</strong> rely on <code>console.log</code> inside the function as the “output” (except debugging).</li>
+      </ul>
+      <pre><code>// Good
+function add(a,b){ return a + b; }
+const result = add(2,3);
+console.log(result);
+
+// Debugging is OK (temporary)
+function addDbg(a,b){
+  const sum = a + b;
+  console.log("sum:", sum); // debug
+  return sum;
+}</code></pre>
+
+      <h2>If / Else</h2>
+      <ul>
+        <li><strong>Do:</strong> use <code>if (isLoggedIn)</code> for booleans.</li>
+        <li><strong>Do:</strong> use comparisons for numbers: <code>age &gt;= 18</code>.</li>
+        <li><strong>Never do:</strong> write <code>if (age)</code> when you mean <code>if (age &gt;= 18)</code>.</li>
+      </ul>
+      <pre><code>// Good
+if (isLoggedIn) { ... }
+
+if (age >= 18) { ... }
+
+// Not best (truthy check, not a real age check)
+if (age) { ... }</code></pre>
+
+      <h2>Equality</h2>
+      <ul>
+        <li><strong>Do:</strong> use <code>===</code> and <code>!==</code> (strict) by default.</li>
+        <li><strong>Never do:</strong> use <code>==</code> unless you *intend* type coercion.</li>
+      </ul>
+      <pre><code>// Good
+if (value === 10) { ... }
+
+// Risky (type coercion)
+if (value == 10) { ... }</code></pre>
+
+      <h2>Arrays</h2>
+      <ul>
+        <li><strong>Do:</strong> use <code>push</code>/<code>pop</code> and <code>map</code>/<code>filter</code>/<code>find</code>.</li>
+        <li><strong>Do:</strong> use <code>for..of</code> for looping over items.</li>
+        <li><strong>Never do:</strong> mutate arrays with <code>splice</code> unless you mean to change the original.</li>
+      </ul>
+      <pre><code>const nums = [1,2,3];
+
+// Good
+const doubled = nums.map(n => n * 2);
+
+// Mutates original (use carefully)
+nums.splice(1,1);</code></pre>
+
+      <h2>Loops</h2>
+      <ul>
+        <li><strong>Do:</strong> use <code>for</code> when you need an index.</li>
+        <li><strong>Do:</strong> use <code>for..of</code> for items.</li>
+        <li><strong>Never do:</strong> create infinite loops accidentally (always make progress toward stopping).</li>
+      </ul>
+      <pre><code>// Index loop
+for (let i = 0; i < arr.length; i++) { ... }
+
+// Item loop
+for (const item of arr) { ... }</code></pre>
+
+      <h2>Objects</h2>
+      <ul>
+        <li><strong>Do:</strong> use dot notation for normal keys: <code>user.name</code>.</li>
+        <li><strong>Do:</strong> use bracket notation when key is dynamic: <code>user[key]</code>.</li>
+        <li><strong>Never do:</strong> use brackets for everything when dot is simpler.</li>
+      </ul>
+      <pre><code>const user = { name: "Kevin", age: 45 };
+
+user.name;        // best for normal keys
+
+const key = "age";
+user[key];        // required for dynamic keys</code></pre>
+    </div>
+  </div>
+</body>
+</html>
