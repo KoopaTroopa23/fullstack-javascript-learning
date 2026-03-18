@@ -72,3 +72,8 @@ for (let i = 0; i < animals.length; i++) {
 for (let i = 1; i < 6; i++) {
     console.log(i)
 }
+
+
+// For loops
+
+
