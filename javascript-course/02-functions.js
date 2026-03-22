@@ -235,7 +235,7 @@ function addNumbers (num1, num2) {
 const totalSum = addNumbers(5, 3);
 console.log(totalSum);
 
-module.exports = addNumbers;
+
 
 
 // test 8
@@ -591,7 +591,11 @@ console.log(membershipLevel(100));
 
 
 
-
+module.exports = {
+  addNumbers,
+  multiplyThree,
+  checkLogin
+};
 
 
 
