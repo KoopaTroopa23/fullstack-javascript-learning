@@ -66,7 +66,7 @@ console.log(age1);
 
 
 ///  Easier way
-function calcAge(birthYear) {
+function calcAge25(birthYear) {
     return 2026 - birthYear;
 }
 
